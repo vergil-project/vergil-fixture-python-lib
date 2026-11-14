@@ -7,6 +7,7 @@ def test_public_api_names() -> None:
     assert sorted(vergil_fixture_python_lib.__all__) == [
         "compare_versions",
         "greet",
+        "is_prerelease",
         "latest_version",
         "render_table",
     ]

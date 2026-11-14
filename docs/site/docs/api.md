@@ -3,7 +3,13 @@
 Every public function is importable from the package itself:
 
 ```python
-from vergil_fixture_python_lib import compare_versions, greet, latest_version, render_table
+from vergil_fixture_python_lib import (
+    compare_versions,
+    greet,
+    is_prerelease,
+    latest_version,
+    render_table,
+)
 ```
 
 Each function raises on bad input rather than returning a placeholder.
@@ -47,6 +53,22 @@ Of equal versions, the first one wins.
 
 Raises `ValueError` when there are no versions, and
 `packaging.version.InvalidVersion` when a string is not a PEP 440 version.
+
+## `is_prerelease(version)`
+
+Returns whether a PEP 440 version string is a pre-release (alpha, beta or
+release candidate) or a development release. A final release and a
+post-release are not.
+
+```python
+>>> is_prerelease("2.0.0rc1")
+True
+>>> is_prerelease("1.0.post1")
+False
+```
+
+Raises `packaging.version.InvalidVersion` when the string is not a PEP 440
+version.
 
 ## `render_table(title, headers, rows)`
 
