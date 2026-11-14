@@ -19,10 +19,10 @@ A test fixture. Nothing here is published to a package registry.
 
 ## Overview
 
-The library has four public functions: `greet`, `compare_versions`,
-`latest_version` and `render_table`. Its runtime dependencies are `rich` and
-`packaging`. Each fixture run adds one function, each in a module of its own
-name under `src/vergil_fixture_python_lib/`.
+The library is a few small public functions, listed on the
+[API](https://vergil-project.github.io/vergil-fixture-python-lib/api/) page. Its
+runtime dependencies are `rich` and `packaging`. Each fixture run adds one
+function, each in a module of its own name under `src/vergil_fixture_python_lib/`.
 
 ## Getting Started
 
