@@ -12,6 +12,8 @@
         <link rel="prev" href="..">
       
       
+        <link rel="next" href="../api/">
+      
       
         
       
@@ -253,6 +255,25 @@
   
 
       
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API
+
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -341,6 +362,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -358,6 +397,74 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#validating-a-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validating a change
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding a function
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -382,6 +489,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#validating-a-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validating a change
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding a function
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -398,7 +535,26 @@
 
 
 <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
-<p>TODO: Add getting started guide for vergil-fixture-python-lib.</p>
+<p>The library is not on PyPI. Depend on a release tag (<code>v&lt;version&gt;</code>) straight
+from GitHub:</p>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>add<span class="w"> </span><span class="s1">'vergil-fixture-python-lib @ git+https://github.com/vergil-project/vergil-fixture-python-lib@&lt;tag&gt;'</span>
+</code></pre></div>
+<p>It needs Python 3.12 or later, and installs <code>rich</code> and <code>packaging</code> with it.</p>
+<h2 id="validating-a-change">Validating a change<a class="headerlink" href="#validating-a-change" title="Permanent link">&para;</a></h2>
+<p>Work in a worktree of the repo and run the one validation command:</p>
+<div class="highlight"><pre><span></span><code>vrg-container-run<span class="w"> </span>--<span class="w"> </span>vrg-validate
+</code></pre></div>
+<p>It runs lint, type checks, the tests at 100% branch coverage and the
+dependency audit in the Python dev container.</p>
+<h2 id="adding-a-function">Adding a function<a class="headerlink" href="#adding-a-function" title="Permanent link">&para;</a></h2>
+<p>Each fixture run adds one function:</p>
+<ol>
+<li>Write <code>tests/test_&lt;name&gt;.py</code> with the expected values.</li>
+<li>Add <code>src/vergil_fixture_python_lib/&lt;name&gt;.py</code> holding the function.</li>
+<li>Import it in <code>src/vergil_fixture_python_lib/__init__.py</code> and add it to
+   <code>__all__</code>, and to the list in <code>tests/test_public_api.py</code>.</li>
+<li>Document it on the <a href="../api/">API</a> page.</li>
+</ol>
 
 
 
