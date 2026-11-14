@@ -253,6 +253,25 @@
   
 
       
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="api/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API
+
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -314,6 +333,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -330,6 +367,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-it-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it exercises
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-it-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why it exists
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where next
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -362,6 +451,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -382,6 +498,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-it-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it exercises
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-it-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why it exists
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where next
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -398,7 +555,35 @@
 
 
 <h1 id="vergil-fixture-python-lib">vergil-fixture-python-lib<a class="headerlink" href="#vergil-fixture-python-lib" title="Permanent link">&para;</a></h1>
-<p>Welcome to the vergil-fixture-python-lib documentation.</p>
+<p>This is a Vergil test fixture. It has no users. It is a small, real Python
+library that Vergil manages exactly as it manages any other library repo, so
+that a change to Vergil can be driven through it end to end before the change
+reaches a repo that matters.</p>
+<h2 id="what-it-exercises">What it exercises<a class="headerlink" href="#what-it-exercises" title="Permanent link">&para;</a></h2>
+<p>A fixture run takes the repo through Vergil's full cycle: a change, its PR
+and CI, the merge, a release, and a check of the result. On the way it
+exercises:</p>
+<ul>
+<li>the Python <code>vrg-validate</code> gate: ruff, mypy, ty, pytest at 100% branch
+  coverage, pip-audit and the license check;</li>
+<li>CI on every Python version in the version window, as a library gets;</li>
+<li>the dependency updater, Dependabot alerts and the vulnerability audit,
+  through two real runtime dependencies, <code>rich</code> and <code>packaging</code>;</li>
+<li>the tagged release and this documentation site.</li>
+</ul>
+<p>Nothing it does reaches a package registry: it is never published to PyPI.</p>
+<p>The program grows by one small function per fixture run. Each public function
+lives in a module of its own name, so a new one is a new module, a new test
+file and one line in the package's <code>__init__.py</code>.</p>
+<h2 id="why-it-exists">Why it exists<a class="headerlink" href="#why-it-exists" title="Permanent link">&para;</a></h2>
+<p>The design is in the
+<a href="https://github.com/vergil-project/.github/blob/develop/epics/1091-language-fixture-repos/spec.md">language fixture repos spec</a>
+(epic vergil-project/.github#1091).</p>
+<h2 id="where-next">Where next<a class="headerlink" href="#where-next" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="getting-started/">Getting Started</a>: depend on it and validate it.</li>
+<li><a href="api/">API</a>: the public functions and how to call them.</li>
+</ul>
 
 
 
