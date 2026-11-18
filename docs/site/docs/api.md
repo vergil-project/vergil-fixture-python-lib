@@ -4,6 +4,7 @@ Every public function is importable from the package itself:
 
 ```python
 from vergil_fixture_python_lib import (
+    base_version,
     compare_versions,
     greet,
     is_prerelease,
@@ -65,6 +66,22 @@ post-release are not.
 True
 >>> is_prerelease("1.0.post1")
 False
+```
+
+Raises `packaging.version.InvalidVersion` when the string is not a PEP 440
+version.
+
+## `base_version(version)`
+
+Returns the base release of a PEP 440 version string: its release numbers,
+with any pre-release, post-release, development or local segment and any
+leading `v` dropped. An epoch is kept.
+
+```python
+>>> base_version("1.2.0rc1")
+'1.2.0'
+>>> base_version("v1.2.0.post3")
+'1.2.0'
 ```
 
 Raises `packaging.version.InvalidVersion` when the string is not a PEP 440
