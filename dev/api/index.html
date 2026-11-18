@@ -482,6 +482,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#base_versionversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        base_version(version)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#render_tabletitle-headers-rows" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -571,6 +582,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#base_versionversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        base_version(version)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#render_tabletitle-headers-rows" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -601,6 +623,7 @@
 <h1 id="api">API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h1>
 <p>Every public function is importable from the package itself:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">vergil_fixture_python_lib</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">base_version</span><span class="p">,</span>
     <span class="n">compare_versions</span><span class="p">,</span>
     <span class="n">greet</span><span class="p">,</span>
     <span class="n">is_prerelease</span><span class="p">,</span>
@@ -642,6 +665,17 @@ post-release are not.</p>
 <span class="kc">True</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">is_prerelease</span><span class="p">(</span><span class="s2">"1.0.post1"</span><span class="p">)</span>
 <span class="kc">False</span>
+</code></pre></div>
+<p>Raises <code>packaging.version.InvalidVersion</code> when the string is not a PEP 440
+version.</p>
+<h2 id="base_versionversion"><code>base_version(version)</code><a class="headerlink" href="#base_versionversion" title="Permanent link">&para;</a></h2>
+<p>Returns the base release of a PEP 440 version string: its release numbers,
+with any pre-release, post-release, development or local segment and any
+leading <code>v</code> dropped. An epoch is kept.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">base_version</span><span class="p">(</span><span class="s2">"1.2.0rc1"</span><span class="p">)</span>
+<span class="s1">'1.2.0'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">base_version</span><span class="p">(</span><span class="s2">"v1.2.0.post3"</span><span class="p">)</span>
+<span class="s1">'1.2.0'</span>
 </code></pre></div>
 <p>Raises <code>packaging.version.InvalidVersion</code> when the string is not a PEP 440
 version.</p>
