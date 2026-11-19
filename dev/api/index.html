@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -493,6 +493,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#major_versionversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        major_version(version)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#render_tabletitle-headers-rows" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -593,6 +604,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#major_versionversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        major_version(version)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#render_tabletitle-headers-rows" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -628,6 +650,7 @@
     <span class="n">greet</span><span class="p">,</span>
     <span class="n">is_prerelease</span><span class="p">,</span>
     <span class="n">latest_version</span><span class="p">,</span>
+    <span class="n">major_version</span><span class="p">,</span>
     <span class="n">render_table</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div>
@@ -676,6 +699,17 @@ leading <code>v</code> dropped. An epoch is kept.</p>
 <span class="s1">'1.2.0'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">base_version</span><span class="p">(</span><span class="s2">"v1.2.0.post3"</span><span class="p">)</span>
 <span class="s1">'1.2.0'</span>
+</code></pre></div>
+<p>Raises <code>packaging.version.InvalidVersion</code> when the string is not a PEP 440
+version.</p>
+<h2 id="major_versionversion"><code>major_version(version)</code><a class="headerlink" href="#major_versionversion" title="Permanent link">&para;</a></h2>
+<p>Returns the major release number of a PEP 440 version string, as an <code>int</code>:
+its first release number, ignoring any epoch, leading <code>v</code> and anything after
+the release numbers.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">major_version</span><span class="p">(</span><span class="s2">"v1.10.0rc1"</span><span class="p">)</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">major_version</span><span class="p">(</span><span class="s2">"2026.11"</span><span class="p">)</span>
+<span class="mi">2026</span>
 </code></pre></div>
 <p>Raises <code>packaging.version.InvalidVersion</code> when the string is not a PEP 440
 version.</p>
