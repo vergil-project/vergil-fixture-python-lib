@@ -10,6 +10,7 @@ def test_public_api_names() -> None:
         "greet",
         "is_prerelease",
         "latest_version",
+        "major_version",
         "render_table",
     ]
 
