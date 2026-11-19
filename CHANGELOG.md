@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.1.3] - 2026-11-19
+
+### Chores
+
+- uv lock --upgrade
+
+### Features
+
+- add major_version and roll packaging back one release in the lock (#40)
+
 ## [0.1.2] - 2026-11-19
 
 ### CI

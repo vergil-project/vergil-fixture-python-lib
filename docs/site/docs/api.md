@@ -9,6 +9,7 @@ from vergil_fixture_python_lib import (
     greet,
     is_prerelease,
     latest_version,
+    major_version,
     render_table,
 )
 ```
@@ -82,6 +83,22 @@ leading `v` dropped. An epoch is kept.
 '1.2.0'
 >>> base_version("v1.2.0.post3")
 '1.2.0'
+```
+
+Raises `packaging.version.InvalidVersion` when the string is not a PEP 440
+version.
+
+## `major_version(version)`
+
+Returns the major release number of a PEP 440 version string, as an `int`:
+its first release number, ignoring any epoch, leading `v` and anything after
+the release numbers.
+
+```python
+>>> major_version("v1.10.0rc1")
+1
+>>> major_version("2026.11")
+2026
 ```
 
 Raises `packaging.version.InvalidVersion` when the string is not a PEP 440
