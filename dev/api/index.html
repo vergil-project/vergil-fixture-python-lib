@@ -504,6 +504,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#minor_versionversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        minor_version(version)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#render_tabletitle-headers-rows" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -615,6 +626,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#minor_versionversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        minor_version(version)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#render_tabletitle-headers-rows" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -651,6 +673,7 @@
     <span class="n">is_prerelease</span><span class="p">,</span>
     <span class="n">latest_version</span><span class="p">,</span>
     <span class="n">major_version</span><span class="p">,</span>
+    <span class="n">minor_version</span><span class="p">,</span>
     <span class="n">render_table</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div>
@@ -710,6 +733,18 @@ the release numbers.</p>
 <span class="mi">1</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">major_version</span><span class="p">(</span><span class="s2">"2026.11"</span><span class="p">)</span>
 <span class="mi">2026</span>
+</code></pre></div>
+<p>Raises <code>packaging.version.InvalidVersion</code> when the string is not a PEP 440
+version.</p>
+<h2 id="minor_versionversion"><code>minor_version(version)</code><a class="headerlink" href="#minor_versionversion" title="Permanent link">&para;</a></h2>
+<p>Returns the minor release number of a PEP 440 version string, as an <code>int</code>:
+its second release number, ignoring any epoch, leading <code>v</code> and anything after
+the release numbers. A version with one release number has a minor number of
+<code>0</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">minor_version</span><span class="p">(</span><span class="s2">"v1.10.0rc1"</span><span class="p">)</span>
+<span class="mi">10</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">minor_version</span><span class="p">(</span><span class="s2">"3"</span><span class="p">)</span>
+<span class="mi">0</span>
 </code></pre></div>
 <p>Raises <code>packaging.version.InvalidVersion</code> when the string is not a PEP 440
 version.</p>
