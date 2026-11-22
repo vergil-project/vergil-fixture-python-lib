@@ -504,6 +504,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#micro_versionversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        micro_version(version)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#minor_versionversion" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -626,6 +637,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#micro_versionversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        micro_version(version)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#minor_versionversion" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -673,6 +695,7 @@
     <span class="n">is_prerelease</span><span class="p">,</span>
     <span class="n">latest_version</span><span class="p">,</span>
     <span class="n">major_version</span><span class="p">,</span>
+    <span class="n">micro_version</span><span class="p">,</span>
     <span class="n">minor_version</span><span class="p">,</span>
     <span class="n">render_table</span><span class="p">,</span>
 <span class="p">)</span>
@@ -733,6 +756,18 @@ the release numbers.</p>
 <span class="mi">1</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">major_version</span><span class="p">(</span><span class="s2">"2026.11"</span><span class="p">)</span>
 <span class="mi">2026</span>
+</code></pre></div>
+<p>Raises <code>packaging.version.InvalidVersion</code> when the string is not a PEP 440
+version.</p>
+<h2 id="micro_versionversion"><code>micro_version(version)</code><a class="headerlink" href="#micro_versionversion" title="Permanent link">&para;</a></h2>
+<p>Returns the micro release number of a PEP 440 version string, as an <code>int</code>:
+its third release number, ignoring any epoch, leading <code>v</code> and anything after
+the release numbers. A version with fewer than three release numbers has a
+micro number of <code>0</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">micro_version</span><span class="p">(</span><span class="s2">"v1.10.12rc1"</span><span class="p">)</span>
+<span class="mi">12</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">micro_version</span><span class="p">(</span><span class="s2">"1.2"</span><span class="p">)</span>
+<span class="mi">0</span>
 </code></pre></div>
 <p>Raises <code>packaging.version.InvalidVersion</code> when the string is not a PEP 440
 version.</p>
