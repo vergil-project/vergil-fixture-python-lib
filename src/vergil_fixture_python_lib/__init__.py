@@ -11,6 +11,7 @@ from vergil_fixture_python_lib.greet import greet
 from vergil_fixture_python_lib.is_prerelease import is_prerelease
 from vergil_fixture_python_lib.latest_version import latest_version
 from vergil_fixture_python_lib.major_version import major_version
+from vergil_fixture_python_lib.minor_version import minor_version
 from vergil_fixture_python_lib.render_table import render_table
 
 __all__ = [
@@ -20,5 +21,6 @@ __all__ = [
     "is_prerelease",
     "latest_version",
     "major_version",
+    "minor_version",
     "render_table",
 ]

@@ -11,6 +11,7 @@ def test_public_api_names() -> None:
         "is_prerelease",
         "latest_version",
         "major_version",
+        "minor_version",
         "render_table",
     ]
 
