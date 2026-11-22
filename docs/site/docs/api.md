@@ -10,6 +10,7 @@ from vergil_fixture_python_lib import (
     is_prerelease,
     latest_version,
     major_version,
+    minor_version,
     render_table,
 )
 ```
@@ -99,6 +100,23 @@ the release numbers.
 1
 >>> major_version("2026.11")
 2026
+```
+
+Raises `packaging.version.InvalidVersion` when the string is not a PEP 440
+version.
+
+## `minor_version(version)`
+
+Returns the minor release number of a PEP 440 version string, as an `int`:
+its second release number, ignoring any epoch, leading `v` and anything after
+the release numbers. A version with one release number has a minor number of
+`0`.
+
+```python
+>>> minor_version("v1.10.0rc1")
+10
+>>> minor_version("3")
+0
 ```
 
 Raises `packaging.version.InvalidVersion` when the string is not a PEP 440
