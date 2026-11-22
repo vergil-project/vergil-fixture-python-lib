@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.1.5] - 2026-11-22
+
+### CI
+
+- stop granting actions: read to the security job (#45)
+
+### Chores
+
+- uv lock --upgrade
+
+### Features
+
+- add micro_version and roll rich back one release in the lock (#46)
+
 ## [0.1.4] - 2026-11-22
 
 ### Chores
