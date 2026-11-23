@@ -8,6 +8,7 @@ def test_public_api_names() -> None:
         "base_version",
         "compare_versions",
         "greet",
+        "is_devrelease",
         "is_postrelease",
         "is_prerelease",
         "latest_version",
