@@ -7,6 +7,7 @@ from vergil_fixture_python_lib import (
     base_version,
     compare_versions,
     greet,
+    is_postrelease,
     is_prerelease,
     latest_version,
     major_version,
@@ -68,6 +69,22 @@ post-release are not.
 >>> is_prerelease("2.0.0rc1")
 True
 >>> is_prerelease("1.0.post1")
+False
+```
+
+Raises `packaging.version.InvalidVersion` when the string is not a PEP 440
+version.
+
+## `is_postrelease(version)`
+
+Returns whether a PEP 440 version string is a post-release. A final release,
+a pre-release and a development release are not, unless they also carry a
+post-release segment.
+
+```python
+>>> is_postrelease("1.0.post1")
+True
+>>> is_postrelease("2.0.0rc1")
 False
 ```
 
