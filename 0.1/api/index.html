@@ -493,6 +493,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#is_devreleaseversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        is_devrelease(version)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#base_versionversion" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -637,6 +648,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#is_devreleaseversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        is_devrelease(version)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#base_versionversion" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -714,6 +736,7 @@
     <span class="n">base_version</span><span class="p">,</span>
     <span class="n">compare_versions</span><span class="p">,</span>
     <span class="n">greet</span><span class="p">,</span>
+    <span class="n">is_devrelease</span><span class="p">,</span>
     <span class="n">is_postrelease</span><span class="p">,</span>
     <span class="n">is_prerelease</span><span class="p">,</span>
     <span class="n">latest_version</span><span class="p">,</span>
@@ -767,6 +790,17 @@ post-release segment.</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">is_postrelease</span><span class="p">(</span><span class="s2">"1.0.post1"</span><span class="p">)</span>
 <span class="kc">True</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">is_postrelease</span><span class="p">(</span><span class="s2">"2.0.0rc1"</span><span class="p">)</span>
+<span class="kc">False</span>
+</code></pre></div>
+<p>Raises <code>packaging.version.InvalidVersion</code> when the string is not a PEP 440
+version.</p>
+<h2 id="is_devreleaseversion"><code>is_devrelease(version)</code><a class="headerlink" href="#is_devreleaseversion" title="Permanent link">&para;</a></h2>
+<p>Returns whether a PEP 440 version string is a development release. A final
+release, a pre-release and a post-release are not, unless they also carry a
+development segment.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">is_devrelease</span><span class="p">(</span><span class="s2">"1.0.dev3"</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">is_devrelease</span><span class="p">(</span><span class="s2">"2.0.0rc1"</span><span class="p">)</span>
 <span class="kc">False</span>
 </code></pre></div>
 <p>Raises <code>packaging.version.InvalidVersion</code> when the string is not a PEP 440
