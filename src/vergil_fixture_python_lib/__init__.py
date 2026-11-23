@@ -8,6 +8,7 @@ entry.
 from vergil_fixture_python_lib.base_version import base_version
 from vergil_fixture_python_lib.compare_versions import compare_versions
 from vergil_fixture_python_lib.greet import greet
+from vergil_fixture_python_lib.is_devrelease import is_devrelease
 from vergil_fixture_python_lib.is_postrelease import is_postrelease
 from vergil_fixture_python_lib.is_prerelease import is_prerelease
 from vergil_fixture_python_lib.latest_version import latest_version
@@ -20,6 +21,7 @@ __all__ = [
     "base_version",
     "compare_versions",
     "greet",
+    "is_devrelease",
     "is_postrelease",
     "is_prerelease",
     "latest_version",
