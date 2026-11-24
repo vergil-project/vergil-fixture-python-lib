@@ -7,6 +7,7 @@ entry.
 
 from vergil_fixture_python_lib.base_version import base_version
 from vergil_fixture_python_lib.compare_versions import compare_versions
+from vergil_fixture_python_lib.epoch_version import epoch_version
 from vergil_fixture_python_lib.greet import greet
 from vergil_fixture_python_lib.is_devrelease import is_devrelease
 from vergil_fixture_python_lib.is_postrelease import is_postrelease
@@ -20,6 +21,7 @@ from vergil_fixture_python_lib.render_table import render_table
 __all__ = [
     "base_version",
     "compare_versions",
+    "epoch_version",
     "greet",
     "is_devrelease",
     "is_postrelease",
