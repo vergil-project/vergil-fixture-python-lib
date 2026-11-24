@@ -515,6 +515,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#epoch_versionversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        epoch_version(version)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#major_versionversion" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -670,6 +681,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#epoch_versionversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        epoch_version(version)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#major_versionversion" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -735,6 +757,7 @@
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">vergil_fixture_python_lib</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">base_version</span><span class="p">,</span>
     <span class="n">compare_versions</span><span class="p">,</span>
+    <span class="n">epoch_version</span><span class="p">,</span>
     <span class="n">greet</span><span class="p">,</span>
     <span class="n">is_devrelease</span><span class="p">,</span>
     <span class="n">is_postrelease</span><span class="p">,</span>
@@ -813,6 +836,16 @@ leading <code>v</code> dropped. An epoch is kept.</p>
 <span class="s1">'1.2.0'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">base_version</span><span class="p">(</span><span class="s2">"v1.2.0.post3"</span><span class="p">)</span>
 <span class="s1">'1.2.0'</span>
+</code></pre></div>
+<p>Raises <code>packaging.version.InvalidVersion</code> when the string is not a PEP 440
+version.</p>
+<h2 id="epoch_versionversion"><code>epoch_version(version)</code><a class="headerlink" href="#epoch_versionversion" title="Permanent link">&para;</a></h2>
+<p>Returns the epoch of a PEP 440 version string, as an <code>int</code>: the number before
+<code>!</code>, or <code>0</code> when the version has no epoch.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">epoch_version</span><span class="p">(</span><span class="s2">"1!2.0"</span><span class="p">)</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">epoch_version</span><span class="p">(</span><span class="s2">"v1.10.0rc1"</span><span class="p">)</span>
+<span class="mi">0</span>
 </code></pre></div>
 <p>Raises <code>packaging.version.InvalidVersion</code> when the string is not a PEP 440
 version.</p>
