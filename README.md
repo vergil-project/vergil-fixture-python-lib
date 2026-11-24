@@ -11,6 +11,7 @@ updater and audit, the tagged release and the docs site. The design is in the
 - [Status](#status)
 - [Overview](#overview)
 - [Getting Started](#getting-started)
+- [Agent-submitted PRs](#agent-submitted-prs)
 - [License](#license)
 
 ## Status
@@ -28,6 +29,10 @@ function, each in a module of its own name under `src/vergil_fixture_python_lib/
 
 See the [documentation](https://vergil-project.github.io/vergil-fixture-python-lib/).
 Validate a change with `vrg-container-run -- vrg-validate`.
+
+## Agent-submitted PRs
+
+This repo was the fixture for the first agent-submitted PR of epic [vergil-project/.github#1384](https://github.com/vergil-project/.github/issues/1384).
 
 ## License
 
