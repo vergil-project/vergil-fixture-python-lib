@@ -6,6 +6,7 @@ Every public function is importable from the package itself:
 from vergil_fixture_python_lib import (
     base_version,
     compare_versions,
+    epoch_version,
     greet,
     is_devrelease,
     is_postrelease,
@@ -119,6 +120,21 @@ leading `v` dropped. An epoch is kept.
 '1.2.0'
 >>> base_version("v1.2.0.post3")
 '1.2.0'
+```
+
+Raises `packaging.version.InvalidVersion` when the string is not a PEP 440
+version.
+
+## `epoch_version(version)`
+
+Returns the epoch of a PEP 440 version string, as an `int`: the number before
+`!`, or `0` when the version has no epoch.
+
+```python
+>>> epoch_version("1!2.0")
+1
+>>> epoch_version("v1.10.0rc1")
+0
 ```
 
 Raises `packaging.version.InvalidVersion` when the string is not a PEP 440

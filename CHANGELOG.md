@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.1.8] - 2026-11-24
+
+### CI
+
+- read the automation App secrets from the automation environment (#82)
+
+### Chores
+
+- uv lock --upgrade
+- sync the managed files with the released templates (#81)
+- sync the managed files with the released templates (#88)
+
+### Documentation
+
+- note the first agent-submitted PR (#87)
+
+### Features
+
+- the daily agent audit (#85)
+- add epoch_version and roll rich back to 14.2.0 in the lock (#89)
+
 ## [0.1.7] - 2026-11-23
 
 ### CI
