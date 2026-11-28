@@ -34,6 +34,8 @@ Validate a change with `vrg-container-run -- vrg-validate`.
 
 This repo was the fixture for the first agent-submitted PR of epic [vergil-project/.github#1384](https://github.com/vergil-project/.github/issues/1384).
 
+It also probes an agent-submitted PR under a human-approved merge-review exemption.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).

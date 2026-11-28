@@ -10,6 +10,8 @@ permissions:
   issues: write
 
 jobs:
+  # The daily GitHub config audit of this repository, run by the shared
+  # ops workflow in vergil-actions.
   github-config:
     uses: vergil-project/vergil-actions/.github/workflows/ops-github-config.yml@v2.1
     permissions:
