@@ -9,3 +9,8 @@ def step_1() -> int:
 def step_2() -> int:
     """Return the second step, built on `step_1`."""
     return step_1() + 1
+
+
+def step_3() -> int:
+    """Return step three."""
+    return step_2() + 1
