@@ -14,3 +14,8 @@ def step_2() -> int:
 def step_3() -> int:
     """Return step three."""
     return step_2() + 1
+
+
+def step_4() -> int:
+    """Return the fourth step."""
+    return step_3() + 1

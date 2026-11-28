@@ -1,6 +1,6 @@
 """Tests for :func:`vergil_fixture_python_lib.chain.step_1`."""
 
-from vergil_fixture_python_lib.chain import step_1, step_2, step_3
+from vergil_fixture_python_lib.chain import step_1, step_2, step_3, step_4
 
 
 def test_step_1() -> None:
@@ -13,3 +13,7 @@ def test_step_2() -> None:
 
 def test_step_3() -> None:
     assert step_3() == 3
+
+
+def test_step_4() -> None:
+    assert step_4() == 4
