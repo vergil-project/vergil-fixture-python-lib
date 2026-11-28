@@ -23,3 +23,7 @@ def step_4() -> int:
 
 def step_5() -> int:
     return step_4() + 1
+
+
+def step_6() -> int:
+    return step_5() + 1
