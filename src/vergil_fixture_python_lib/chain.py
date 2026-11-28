@@ -19,3 +19,7 @@ def step_3() -> int:
 def step_4() -> int:
     """Return the fourth step."""
     return step_3() + 1
+
+
+def step_5() -> int:
+    return step_4() + 1

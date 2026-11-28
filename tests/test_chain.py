@@ -17,3 +17,9 @@ def test_step_3() -> None:
 
 def test_step_4() -> None:
     assert step_4() == 4
+
+
+def test_step_5() -> None:
+    from vergil_fixture_python_lib.chain import step_5
+
+    assert step_5() == 5
