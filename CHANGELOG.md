@@ -5,6 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.1.9] - 2026-11-28
+
+### CI
+
+- describe the github-config job in the ops workflow (#96)
+
+### Chores
+
+- uv lock --upgrade
+- sync the managed files with the released templates (#104)
+- lock pytest-xdist one release back, at 3.7.0 (#106)
+- uv lock --upgrade
+- sync the managed files with the released templates (#112)
+
+### Documentation
+
+- note the merge-review exemption probe (#97)
+
+### Features
+
+- add local_version and roll packaging back in uv.lock (#113)
+
 ## [0.1.8] - 2026-11-24
 
 ### CI
