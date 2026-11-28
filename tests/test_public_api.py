@@ -13,6 +13,7 @@ def test_public_api_names() -> None:
         "is_postrelease",
         "is_prerelease",
         "latest_version",
+        "local_version",
         "major_version",
         "micro_version",
         "minor_version",
