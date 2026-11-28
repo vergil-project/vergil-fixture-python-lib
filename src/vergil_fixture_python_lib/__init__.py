@@ -13,6 +13,7 @@ from vergil_fixture_python_lib.is_devrelease import is_devrelease
 from vergil_fixture_python_lib.is_postrelease import is_postrelease
 from vergil_fixture_python_lib.is_prerelease import is_prerelease
 from vergil_fixture_python_lib.latest_version import latest_version
+from vergil_fixture_python_lib.local_version import local_version
 from vergil_fixture_python_lib.major_version import major_version
 from vergil_fixture_python_lib.micro_version import micro_version
 from vergil_fixture_python_lib.minor_version import minor_version
@@ -27,6 +28,7 @@ __all__ = [
     "is_postrelease",
     "is_prerelease",
     "latest_version",
+    "local_version",
     "major_version",
     "micro_version",
     "minor_version",
